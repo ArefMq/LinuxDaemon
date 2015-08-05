@@ -45,7 +45,7 @@ void GSRC::_closeStdIO()
     close(STDERR_FILENO);
 }
 
-void GSRC::_run(bool shouldFork, bool shouldUnMask, bool shouldChangeDir, bool shouldCloseStdIO)
+void GSRC::run(bool shouldFork, bool shouldUnMask, bool shouldChangeDir, bool shouldCloseStdIO)
 {
     //-- Fork off the parent process
     if (shouldFork)

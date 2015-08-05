@@ -13,7 +13,6 @@
 
 #define CREATE_SERVICE(func, intv) \
     class _Service : public GSRC::Service { \
-    public: _Service() : GSRC::Service(true, true, true, false) {} /* [FIXME] : this line is for debug only */ \
     private: void update() { func } \
     } _service; _service.start(intv); \
     exit(EXIT_SUCCESS);
